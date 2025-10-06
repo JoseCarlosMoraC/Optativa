@@ -110,6 +110,26 @@ if(today>first_october){
 }else{
   console.log("Today is before to first octuber");
 }
-  function myFirstFunticon(){
+  function myFirstFunction(){
     console.log("Thank you for you click");
   }
+
+    function mySecondFunction(){
+    console.log("Thank you for you interest");
+  }
+  function myThirdFunction(mensaje){
+console.log ("Pesao")
+console.log(mensaje)
+  }
+
+
+var div = document.getElementsByTagName("div");
+console.log(div);
+var second_div = document.querySelector("#my_second_div");
+console.log(second_div);
+
+function $(selector){
+  return document.querySelectorAll(selector);
+
+}
+console.log($("#my_third_div"))
