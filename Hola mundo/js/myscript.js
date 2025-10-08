@@ -1,3 +1,10 @@
+ function $(selector){
+  return document.querySelector(selector);
+
+}
+ 
+ 
+ 
  /* alert("Hello to JS")
 
   console.log("Hola K ASE");
@@ -98,7 +105,7 @@ for(;i>=0;i--){
   console.log(item); 
 });
 */
-let today = new Date();
+/*let today = new Date();
 let first_october = new Date(2025, 9,1);
 console.log(today);
 console.log(first_october);
@@ -121,15 +128,30 @@ if(today>first_october){
 console.log ("Pesao")
 console.log(mensaje)
   }
-
+*/
 
 var div = document.getElementsByTagName("div");
 console.log(div);
 var second_div = document.querySelector("#my_second_div");
 console.log(second_div);
 
-function $(selector){
-  return document.querySelectorAll(selector);
 
+console.log($("#my_third_div"));
+console.log($(".pruebas"))
+$("btn").addEventListener("click",function(){
+  var input = document.createElement("input");
+  input.setAttribute("type","email");
+  input.setAttribute("placeholder","E-mail");
+  input.setAttribute("name","emails[]");
+  $("#form").appendChild(input);
+  myAlert("Add new email input");
+
+});
+
+function myAlert(msg){
+  var div= document.createElement ("div");
+  div.classList.add("alert");
+  div.innerHTML = msg;
+  $("body").insertBefore(div,$("body").firstChild);
 }
-console.log($("#my_third_div"))
+
