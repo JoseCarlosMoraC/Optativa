@@ -1,6 +1,6 @@
 var form = document.getElementById("registroForm");
 
-// Validación en tiempo real
+
 var inputs = form.querySelectorAll("input, select, textarea");
 for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("input", function () {
