@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "chalk-string": "^4.0.0",
+    "inquirer": "^12.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
