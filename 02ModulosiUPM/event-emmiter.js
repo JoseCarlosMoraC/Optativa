@@ -14,3 +14,4 @@ pub
     pub.emit('myevent', 'Volviendo a emitir')
     pub.emit('myevent', 'Volviendo a emitir por tercera vez')
 
+//pub.removeAllListeners('myevent')
