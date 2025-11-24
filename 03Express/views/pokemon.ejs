@@ -1,0 +1,13 @@
+<%- include("template/cabecera") %>
+
+    <div class="container">
+        <!--Si existen elementos en el array de Pokemon-->
+        <% if (arrayPokemon.length > 0) { %>
+         <!--Haremos el foreach para recorrer el array-->
+         <% arrayPokemon.forEach(pokemon => { %>
+           <!--Aquí podremos mostrar todos los pokemon en una tabla-->
+         <% }) %>
+        <% } %>
+    </div>
+
+<%- include("template/footer") %>
