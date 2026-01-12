@@ -1,0 +1,41 @@
+<%- include("templates/cabecera", {subtitulo:'Panel de Jugadores - CoachX'}) %>
+
+ <div class="container">
+    <h1>CRUD Jugadores - CoachX</h1>
+    <a class="btn btn-success btn-block my-4" href="/jugador/crear">Crear nuevo jugador</a>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Dorsal</th>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Equipo</th>
+                    <th scope="col">Estado Físico</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (arrayJugador.length> 0) { %>
+                    <!--Haremos el foreach para recorrer el array-->
+                    <% arrayJugador.forEach(jugador => { %>
+                        <tr>
+                            <th scope="row"><%= jugador.id %></th>
+                            <td><%= jugador.nombre %></td>
+                            <td><%= jugador.apellidos %></td>
+                            <td><%= jugador.dorsal %></td>
+                            <td><%= jugador.posicion %></td>
+                            <td><%= jugador.equipo %></td>
+                            <td><%= jugador.estado_fisico %></td>
+                            <td><a class="btn btn-warning btn-sm" href="jugador/<%= jugador.id %>">Editar/Eliminar</a></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+
+        </table>
+    </div>
+
+
+<%- include("templates/footer") %>

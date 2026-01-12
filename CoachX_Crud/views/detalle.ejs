@@ -1,0 +1,68 @@
+<%- include("templates/cabecera", {subtitulo: 'Detalles del Jugador - CoachX' }) %>
+    <div class="container">
+        <h1>Detalles del Jugador</h1>
+    </div>
+    <% if (error) { %>
+            <%= mensaje %> 
+            <a 
+                href="/jugador"
+                class="btn btn-dark btn-block my-2"
+            >
+                Volver
+            </a>
+    <% } %>
+    <% if (!error) { %>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Dorsal</th>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Equipo</th>
+                    <th scope="col">Estado Físico</th>
+                    <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><%= jugador.id %></th>
+                        <td><%= jugador.nombre %> </td>
+                        <td><%= jugador.apellidos %> </td>
+                        <td><%= jugador.dorsal %></td>
+                        <td><%= jugador.posicion %></td>
+                        <td><%= jugador.equipo %></td>
+                        <td><%= jugador.estado_fisico %></td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" data-id="<%= jugador.id %>">
+                            Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+      <script>
+            const btnEliminar = document.querySelector('.btn-danger')
+            btnEliminar.addEventListener('click', async () => {
+                console.log(btnEliminar.dataset.id)
+                try {
+                    // https://developer.mozilla.org/es/docs/Web/API/HTMLElement/dataset
+                    const data = await fetch(`/jugador/${btnEliminar.dataset.id}`, {
+                        method: 'delete'
+                    })
+                    const res = await data.json()
+                    console.log(res)
+                    if (res.estado) {
+                        window.location.href = '/jugador'
+                    } else {
+                        console.log(res)
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+      </script>
+    <% } %>
+  
+<%- include("templates/footer") %>
