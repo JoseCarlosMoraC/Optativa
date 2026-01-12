@@ -1,23 +1,21 @@
 {
-  "name": "03express",
+  "name": "autoescuela_proyecto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node 01-express",
-    "dev": "nodemon 01-express",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+   "dependencies": {
     "body-parser": "^2.2.1",
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongodb": "^7.0.0",
     "mongoose": "^9.0.1",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.11"
   }
 }

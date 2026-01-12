@@ -1,0 +1,27 @@
+<%- include("templates/cabecera", {subtitulo:'Nuestras Autoescuelas'}) %>
+    <div class="container">
+        <h1>Nuestras Autoescuelas</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (arrayEscuelas.length > 0) { %>
+                    <% arrayEscuelas.forEach(escuela => { %>
+                        <tr>
+                            <th scope="row"><%= escuela.id %></th>
+                            <td><%= escuela.nombre %></td>
+                            <td><%= escuela.direccion %></td>
+                            <td><%= escuela.telefono %></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+<%- include("templates/footer") %>

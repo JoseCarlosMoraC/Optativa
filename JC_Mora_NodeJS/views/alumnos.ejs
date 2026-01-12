@@ -1,0 +1,27 @@
+<%- include("templates/cabecera", {subtitulo:'Nuestros Alumnos'}) %>
+    <div class="container">
+        <h1>Nuestros Alumnos</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Curso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (arrayAlumnos.length > 0) { %>
+                    <% arrayAlumnos.forEach(alumno => { %>
+                        <tr>
+                            <th scope="row"><%= alumno.id %></th>
+                            <td><%= alumno.nombre %></td>
+                            <td><%= alumno.edad %></td>
+                            <td><%= alumno.curso %></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+<%- include("templates/footer") %>

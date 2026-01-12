@@ -1,13 +1,35 @@
-<%- include("template/cabecera") %>
+<%- include("template/cabecera", { subtitulo: 'Panel de administrador' }) %>
 
-    <div class="container">
-        <!--Si existen elementos en el array de Pokemon-->
-        <% if (arrayPokemon.length > 0) { %>
-         <!--Haremos el foreach para recorrer el array-->
-         <% arrayPokemon.forEach(pokemon => { %>
-           <!--Aquí podremos mostrar todos los pokemon en una tabla-->
-         <% }) %>
-        <% } %>
-    </div>
+<div class="container mt-4">
+    <h2 class="mb-3">Listado de Pokémon</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (arrayPokemon.length > 0) { %>
+                <% arrayPokemon.forEach(p => { %>
+                    <tr>
+                        <th scope="row"><%= p.id %></th>
+                        <td><%= p.nombre %></td>
+                        <td><%= p.tipo %></td>
+                        <td><%= p.descripcion %></td>
+                        <td><%= p.accion %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5" class="text-center">No hay Pokémon disponibles</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
 
 <%- include("template/footer") %>

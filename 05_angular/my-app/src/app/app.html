@@ -1,0 +1,209 @@
+<style>
+  :host {
+    --primary: oklch(51% 0.27 263);
+    --secondary: oklch(53% 0.28 297);
+    --accent: oklch(69% 0.27 333);
+    --dark: oklch(19% 0.01 301);
+    --mid: oklch(37% 0.01 303);
+    --light: oklch(71% 0.01 304);
+
+    --gradient: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--accent),
+      var(--secondary)
+    );
+
+    font-family: "Inter", system-ui, sans-serif;
+    box-sizing: border-box;
+  }
+
+  main {
+    min-height: 100vh;
+    background: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    width: 100%;
+    padding: 5rem 2rem;
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.25rem;
+    opacity: 0.95;
+  }
+
+  .hero-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--dark);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+
+  section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 4rem 2rem;
+  }
+
+  section h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+
+  section p {
+    color: var(--mid);
+    max-width: 700px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+
+  .feature h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 18px;
+    border-top: 4px solid var(--primary);
+  }
+
+  footer {
+    width: 100%;
+    background: #111;
+    color: #bbb;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  footer strong {
+    color: white;
+  }
+</style>
+
+<main>
+
+  <!-- HERO -->
+<header class="hero">
+  <h1>La app que no sabías que necesitabas</h1>
+  <p>
+    Una plataforma tan moderna que hasta José Carlos Mora se sorprendió al terminarla
+  </p>
+
+  <div class="hero-buttons">
+    <button class="btn btn-primary">Probar sin miedo</button>
+    <button class="btn btn-outline">Leer la letra pequeña</button>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <h2>¿Y esto exactamente qué es?</h2>
+  <p>
+    Una aplicación espectacular que no promete cambiar tu vida,  
+    pero sí hacerte el trabajo mucho más fácil.
+  </p>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <h2>Motivos totalmente objetivos por los que es increíble</h2>
+
+  <div class="features">
+    @for (feature of [
+      { title: 'Arquitectura con cabeza', desc: 'Nada de parches raros, todo pensado para durar.' },
+      { title: 'Angular 17 del bueno', desc: 'Signals, control flow moderno y cero dramas.' },
+      { title: 'Responsive de verdad', desc: 'Funciona igual de bien en móvil que en tu monitor gigante.' },
+      { title: 'Mantenimiento sin llorar', desc: 'No he llorado haciendolo.' },
+      { title: 'Lista para producción', desc: 'Deploy y a otra cosa, sin rituales extraños.' },
+      { title: 'Diseño que no molesta', desc: 'Bonita, clara y sin colores radioactivos.' }
+    ]; track feature.title) {
+      <div class="feature">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.desc }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section>
+  <h2>¿Para qué la puedes usar?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Panel de control serio</h3>
+      <p>Usuarios, métricas y botones que sí hacen cosas.</p>
+    </div>
+    <div class="card">
+      <h3>App corporativa</h3>
+      <p>Para empresas que quieren orden… o al menos aparentarlo.</p>
+    </div>
+    <div class="card">
+      <h3>Tu próximo SaaS</h3>
+      <p>La base perfecta para hacerte rico (o intentarlo).</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © 2026 <strong>Panel de Administración</strong> · Hecho con Angular, café y algo de cariño ❤️
+  </p>
+</footer>
