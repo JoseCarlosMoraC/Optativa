@@ -1,0 +1,16 @@
+<section >
+  <div class="header-section">
+    <form>
+      <input type="text" placeholder="Filter by pokemon" #filter>
+      <button class="primary" type="button" (click)="onsearch(filter.value)"> Search</button>
+    </form>
+    <button class="btn-create" routerLink="/create"> Crear Nuevo Pokémon</button>
+  </div>
+  
+  <section class="results">
+    <app-pokemons
+      *ngFor="let pokemons of filteredpokemonslista"
+      [pokemons]="pokemons"> 
+    </app-pokemons>
+  </section>
+</section>

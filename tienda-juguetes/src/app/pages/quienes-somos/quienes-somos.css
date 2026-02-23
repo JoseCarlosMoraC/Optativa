@@ -1,0 +1,23 @@
+h2, p {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.titulo-quienes {
+  color: #e91e63;      
+  font-weight: bold;     
+  font-size: 2rem;       
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+
+.parrafo-quienes {
+  font-size: 1.3rem;     
+  color: #1976d2;       
+  margin-bottom: 15px;
+  line-height: 1.6;
+}

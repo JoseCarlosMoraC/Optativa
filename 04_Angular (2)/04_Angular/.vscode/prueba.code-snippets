@@ -1,0 +1,11 @@
+{
+    "Prueba": {
+       "scope": "typescript,html",
+   "prefix": "prueba",
+       "body": [
+           "<h2>¡Hola2!, {{ title() }}</h2>"
+       ],
+       "description": "Prueba de saludo 2"
+   }
+
+}

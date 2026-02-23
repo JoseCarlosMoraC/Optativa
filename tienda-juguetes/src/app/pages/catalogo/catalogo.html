@@ -1,0 +1,21 @@
+<h1>Nuestro Catálogo</h1>
+
+<div *ngFor="let producto of productos" class="card">
+
+  <h3>{{ producto.nombre }}</h3>
+
+  <img [src]="producto.imagen" width="150">
+
+  <p>{{ producto.descripcion }}</p>
+
+  <p><strong>{{ producto.precio }} €</strong></p>
+
+  <p *ngIf="producto.disponible; else noDisponible">
+    Disponible
+  </p>
+
+  <ng-template #noDisponible>
+    No disponible
+  </ng-template>
+
+</div>

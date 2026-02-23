@@ -1,0 +1,21 @@
+<h1>Contacto</h1>
+
+<form (ngSubmit)="enviar()">
+
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="nombre" name="nombre" required>
+
+  <br><br>
+
+  <label>Mensaje:</label>
+  <textarea [(ngModel)]="mensaje" name="mensaje" required></textarea>
+
+  <br><br>
+
+  <button type="submit">Enviar</button>
+
+</form>
+
+<p *ngIf="enviado">
+  Gracias {{ nombre }} por contactarnos.
+</p>

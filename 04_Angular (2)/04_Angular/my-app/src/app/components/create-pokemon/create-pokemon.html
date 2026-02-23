@@ -1,0 +1,66 @@
+<article>
+  <h1>Crear Nuevo Pokémon</h1>
+  
+  <form [formGroup]="formPokemon" (submit)="onSubmit()">
+    <section class="form-group">
+      <label for="nombre">Nombre del Pokémon</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        placeholder="Ej: Pikachu" 
+        formControlName="nombre"
+        required/>
+      <span class="error" *ngIf="formPokemon.get('nombre')?.invalid && formPokemon.get('nombre')?.touched">
+        El nombre es requerido
+      </span>
+    </section>
+
+    <section class="form-group">
+      <label for="tipo">Tipo</label>
+      <input 
+        type="text" 
+        id="tipo" 
+        placeholder="Ej: Eléctrico" 
+        formControlName="tipo"
+        required/>
+      <span class="error" *ngIf="formPokemon.get('tipo')?.invalid && formPokemon.get('tipo')?.touched">
+        El tipo es requerido
+      </span>
+    </section>
+
+    <section class="form-group">
+      <label for="description">Descripción</label>
+      <textarea 
+        id="description" 
+        placeholder="Describe al Pokémon" 
+        formControlName="description"
+        rows="4"
+        required></textarea>
+      <span class="error" *ngIf="formPokemon.get('description')?.invalid && formPokemon.get('description')?.touched">
+        La descripción es requerida
+      </span>
+    </section>
+
+    <section class="form-group">
+      <label for="photo">URL de la imagen Ejemplo: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/numeropokemon.png</label>
+      <input 
+        type="url" 
+        id="photo" 
+        placeholder="Ingresa la URL de la imagen" 
+        formControlName="photo"
+        required/>
+      <span class="error" *ngIf="formPokemon.get('photo')?.invalid && formPokemon.get('photo')?.touched">
+        La URL de la imagen es requerida
+      </span>
+    </section>
+
+    <section class="form-actions">
+      <button class="primary" type="submit" [disabled]="!formPokemon.valid">
+        Crear Pokémon
+      </button>
+      <button class="secondary" type="button" (click)="onCancel()">
+        Cancelar
+      </button>
+    </section>
+  </form>
+</article>
