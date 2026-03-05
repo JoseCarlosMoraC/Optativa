@@ -1,0 +1,76 @@
+.jugadores-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1B2A4A;
+  font-weight: 900;
+}
+
+.header h1 span { color: #E8470A; }
+
+.header-acciones {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.buscador {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 220px;
+}
+
+.buscador:focus { border-color: #E8470A; }
+
+.btn-anadir {
+  background: #E8470A;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-anadir:hover { opacity: 0.85; }
+
+.subtitulo {
+  color: #888;
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+}
+
+.jugadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-foto">
+    <img [src]="jugador.foto" [alt]="jugador.nombre" />
+    <span class="dorsal">#{{ jugador.dorsal }}</span>
+  </div>
+
+  <div class="card-body">
+    <h3>{{ jugador.nombre }}</h3>
+    <p class="posicion">{{ jugador.posicion }}</p>
+    <p class="equipo">{{ jugador.equipo }}</p>
+    <span class="estado" [ngClass]="getEstadoClass(jugador.estado)">
+      {{ jugador.estado }}
+    </span>
+  </div>
+
+  <div class="card-acciones">
+    <a [routerLink]="['/details', jugador.nombre]" class="btn-ver">Ver</a>
+    <a [routerLink]="['/edit', jugador.nombre]"    class="btn-editar">Editar</a>
+  </div>
+</div>

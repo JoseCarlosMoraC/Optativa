@@ -1,0 +1,76 @@
+<div class="page">
+  <div class="form-card">
+
+    <div class="loading" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <p>Cargando datos del jugador...</p>
+    </div>
+
+    <ng-container *ngIf="!isLoading">
+
+      <div class="form-header">
+        <h2>Editar Jugador</h2>
+        <p>Modifica los datos de {{ jugadorNombre }}</p>
+      </div>
+
+      <form [formGroup]="formJugador" (ngSubmit)="onSubmit()">
+
+        <div class="campo">
+          <label>Nombre completo</label>
+          <input type="text" formControlName="nombre" />
+        </div>
+
+        <div class="campo">
+          <label>Dorsal</label>
+          <input type="number" formControlName="dorsal" min="1" max="99" />
+        </div>
+
+        <div class="campo">
+          <label>Posición</label>
+          <select formControlName="posicion">
+            <option value="">-- Selecciona --</option>
+            <option value="Portero">Portero</option>
+            <option value="Defensa">Defensa</option>
+            <option value="Centrocampista">Centrocampista</option>
+            <option value="Delantero">Delantero</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label>Equipo</label>
+          <select formControlName="equipo">
+            <option value="">-- Selecciona --</option>
+            <option value="Juvenil A">Juvenil A</option>
+            <option value="Juvenil B">Juvenil B</option>
+            <option value="Cadete A">Cadete A</option>
+            <option value="Cadete B">Cadete B</option>
+            <option value="Infantil A">Infantil A</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label>Estado</label>
+          <select formControlName="estado">
+            <option value="Disponible">Disponible</option>
+            <option value="Lesionado">Lesionado</option>
+            <option value="Sancionado">Sancionado</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label>URL Foto</label>
+          <input type="url" formControlName="foto" />
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-cancelar" (click)="onCancel()">Cancelar</button>
+          <button type="submit" class="btn-guardar" [disabled]="isSubmitting">
+            {{ isSubmitting ? 'Guardando...' : 'Guardar Cambios' }}
+          </button>
+        </div>
+
+      </form>
+    </ng-container>
+
+  </div>
+</div>

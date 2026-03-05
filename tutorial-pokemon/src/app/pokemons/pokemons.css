@@ -1,0 +1,44 @@
+.listing {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.listing:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.listing-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.listing-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.listing-type {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+a:hover {
+  background: #555;
+}

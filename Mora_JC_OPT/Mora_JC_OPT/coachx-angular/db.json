@@ -1,0 +1,77 @@
+{
+  "jugadores": [
+    {
+      "id": "1",
+      "nombre": "Carlos García",
+      "dorsal": 9,
+      "posicion": "Delantero",
+      "equipo": "Juvenil A",
+      "estado": "Disponible",
+      "foto": "https://ui-avatars.com/api/?name=Carlos+Garcia&background=1B2A4A&color=fff&size=200"
+    },
+    {
+      "id": "2",
+      "nombre": "Alejandro Ruiz",
+      "dorsal": 1,
+      "posicion": "Portero",
+      "equipo": "Juvenil A",
+      "estado": "Disponible",
+      "foto": "https://ui-avatars.com/api/?name=Alejandro+Ruiz&background=E8470A&color=fff&size=200"
+    },
+    {
+      "id": "3",
+      "nombre": "Mario Sánchez",
+      "dorsal": 4,
+      "posicion": "Defensa",
+      "equipo": "Cadete B",
+      "estado": "Lesionado",
+      "foto": "https://ui-avatars.com/api/?name=Mario+Sanchez&background=1B2A4A&color=fff&size=200"
+    },
+    {
+      "id": "4",
+      "nombre": "Pablo Torres",
+      "dorsal": 8,
+      "posicion": "Centrocampista",
+      "equipo": "Juvenil A",
+      "estado": "Disponible",
+      "foto": "https://ui-avatars.com/api/?name=Pablo+Torres&background=E8470A&color=fff&size=200"
+    },
+    {
+      "id": "5",
+      "nombre": "Luis Fernández",
+      "dorsal": 6,
+      "posicion": "Centrocampista",
+      "equipo": "Cadete B",
+      "estado": "Sancionado",
+      "foto": "https://ui-avatars.com/api/?name=Luis+Fernandez&background=1B2A4A&color=fff&size=200"
+    },
+    {
+      "nombre": "Prueba",
+      "dorsal": 10,
+      "posicion": "Portero",
+      "equipo": "Infantil A",
+      "estado": "Lesionado",
+      "foto": "https://youth.europa.eu/sites/default/files/nnfe-people/9.jpg",
+      "id": "dfb6"
+    },
+    {
+      "id": "a897",
+      "nombre": "Prueba2",
+      "dorsal": 10,
+      "posicion": "Delantero",
+      "equipo": "Cadete A",
+      "estado": "Sancionado",
+      "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKV10YooZk00g080Y0h7tevmqxIR0VwJXamQ&s"
+    },
+    {
+      "id": "c28f",
+      "nombre": "Javi",
+      "dorsal": 4,
+      "posicion": "Defensa",
+      "equipo": "Juvenil A",
+      "estado": "Disponible",
+      "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSGykGmD4WIee_yCaztrV94OH_C-sRS7UwLA&s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

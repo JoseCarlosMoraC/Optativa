@@ -1,0 +1,30 @@
+<div class="jugadores-page">
+
+  <div class="header">
+    <h1>Coach<span>X</span> — Plantilla</h1>
+    <div class="header-acciones">
+      <input
+        type="text"
+        placeholder="Buscar jugador..."
+        class="buscador"
+        (input)="onsearch($any($event.target).value)"
+      />
+      <a routerLink="/crear" class="btn-anadir">+ Añadir Jugador</a>
+    </div>
+  </div>
+
+  <p class="subtitulo">{{ filteredjugadoreslista.length }} jugadores encontrados</p>
+
+  <div class="jugadores-grid">
+    <app-jugador-card
+      *ngFor="let jugador of filteredjugadoreslista"
+      [jugador]="jugador"
+    />
+  </div>
+
+  <div class="empty" *ngIf="filteredjugadoreslista.length === 0">
+    <p>No se encontraron jugadores.</p>
+    <a routerLink="/crear" class="btn-anadir">Añadir el primero</a>
+  </div>
+
+</div>

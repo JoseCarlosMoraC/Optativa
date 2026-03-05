@@ -1,0 +1,50 @@
+<div class="page" *ngIf="jugador; else cargando">
+
+  <div class="ficha-hero">
+    <div class="hero-foto">
+      <img [src]="jugador.foto" [alt]="jugador.nombre" />
+    </div>
+    <div class="hero-info">
+      <span class="dorsal-badge">#{{ jugador.dorsal }}</span>
+      <h1>{{ jugador.nombre }}</h1>
+      <p class="posicion">{{ jugador.posicion }}</p>
+      <p class="equipo">{{ jugador.equipo }}</p>
+      <span class="estado" [ngClass]="getEstadoClass(jugador.estado)">
+        {{ jugador.estado }}
+      </span>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat"><span class="stat-n">24</span><span class="stat-l">Partidos</span></div>
+    <div class="stat"><span class="stat-n">8</span><span class="stat-l">Goles</span></div>
+    <div class="stat"><span class="stat-n">5</span><span class="stat-l">Asistencias</span></div>
+    <div class="stat"><span class="stat-n">1847'</span><span class="stat-l">Minutos</span></div>
+  </div>
+
+  <div class="datos-card">
+    <h3>Datos del jugador</h3>
+    <div class="dato-fila"><span class="dato-k">Nombre</span>   <span class="dato-v">{{ jugador.nombre }}</span></div>
+    <div class="dato-fila"><span class="dato-k">Dorsal</span>   <span class="dato-v">{{ jugador.dorsal }}</span></div>
+    <div class="dato-fila"><span class="dato-k">Posición</span> <span class="dato-v">{{ jugador.posicion }}</span></div>
+    <div class="dato-fila"><span class="dato-k">Equipo</span>   <span class="dato-v">{{ jugador.equipo }}</span></div>
+    <div class="dato-fila">
+      <span class="dato-k">Estado</span>
+      <span class="estado" [ngClass]="getEstadoClass(jugador.estado)">{{ jugador.estado }}</span>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <button class="btn-volver"   (click)="router.navigate(['/'])">← Volver</button>
+    <button class="btn-editar"   (click)="onEdit()">Editar</button>
+    <button class="btn-eliminar" (click)="onDelete()">Eliminar</button>
+  </div>
+
+</div>
+
+<ng-template #cargando>
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Cargando jugador...</p>
+  </div>
+</ng-template>

@@ -1,0 +1,39 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "nombre": "Pikachu",
+      "tipo": "Eléctrico",
+      "description": "Pokémon ratón famoso por su cola en forma de rayo",
+      "photo": "https://imgs.search.brave.com/D3278FF5_SKu-6C36INyVUdBLCZPY-6BeHuEfi3Xoj4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDUzMzgy/NzYuanBn"
+    },
+    {
+      "id": 2,
+      "nombre": "Charmander",
+      "tipo": "Fuego",
+      "description": "Pokémon lagarto con una llama en la punta de su cola",
+      "photo": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/56/latest/20200307023245/Charmander.png/800px-Charmander.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Bulbasaur",
+      "tipo": "Planta",
+      "description": "Pokémon semilla con un bulbo en su espalda",
+      "photo": "https://static.wikia.nocookie.net/espokemon/images/4/43/Bulbasaur.png/revision/latest?cb=20170120032346"
+    },
+    {
+      "id": 4,
+      "nombre": "Squirtle",
+      "tipo": "Agua",
+      "description": "Pokémon tortuguita que dispara agua por su boca",
+      "photo": "https://img.buzzfeed.com/buzzfeed-static/static/2016-04/15/16/enhanced/webdr07/enhanced-buzz-3093-1460752324-5.jpg?no-auto"
+    },
+    {
+      "id": 5,
+      "nombre": "Gengar",
+      "tipo": "Fantasma",
+      "description": "Pokémon sombra que se esconde en la oscuridad",
+      "photo": "https://imgs.search.brave.com/J1jNBsc2-nMO01-pLuCCY126J9Hd9SfNoBG3pGYHPhU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC85L2Yv/NS8xMTkzNjA4LTE5/MjB4MTA4MC1kZXNr/dG9wLTEwODBwLWdl/bmdhci1iYWNrZ3Jv/dW5kLXBob3RvLmpw/Zw"
+    }
+  ]
+}

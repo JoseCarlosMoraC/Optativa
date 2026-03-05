@@ -1,0 +1,25 @@
+<article>
+  <img class="listing-photo"
+      [src]="pokemoninterface?.photo"
+      alt="Pokemon {{pokemoninterface?.nombre}}"
+      crossorigin/>
+
+  <section>
+    <h2 class="listing-heading">{{ pokemoninterface?.nombre }}</h2>
+    <p class="listing-type">{{ pokemoninterface?.tipo }} — {{ pokemoninterface?.description }}</p>
+  </section>
+
+  <section class="action-buttons">
+    <button class="btn-edit" (click)="onEdit()">Editar</button>
+    <button class="btn-delete" (click)="onDelete()">Eliminar</button>
+  </section>
+
+  <section>
+    <h2>¿Quieres entrenar a este Pokémon?</h2>
+    <form [formGroup]="formAngular" (submit)="onsubmit()">
+      <label for="nombreentrenador">Tu nombre</label>
+      <input type="text" id="nombreentrenador" placeholder="Escribe tu nombre" formControlName="nombreentrenador"/>
+      <button class="primary" type="submit">Ser entrenador</button>
+    </form>
+  </section>
+</article>
